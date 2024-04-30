@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto, sans-serif;
+}
+
+header {
+    background-color: #3a79d1;
+    color: #fff;
+    padding: 10px 0;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+  
+.container {
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+nav ul {
+    list-style: none;
+    display: flex;
+  }
+  
+nav ul li {
+    margin-right: 20px;
+  }
+
+  #sobre-a-loja{
+    display: flex;
+    align-items: space-between;
+  }
+
+  #sobre-a-loja h2{
+    border-bottom: 3px solid #3a79d1;
+    margin-bottom: 56px;
+    padding: 16px 0 0;
+    color: #3a79d1;
+  }
+
+  .sobre {
+    margin-left: 30px;
+  }
+
+  #produtos h2{
+    border-bottom: 3px solid #3a79d1;
+    margin-bottom: 56px;
+    padding: 16px 0 0;
+    color: #3a79d1;
+  }
+
+  .fotos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.fotos button {
+    background-color: #3a79d1;
+    color: #fff;
+    padding: 8px 16px;
+    border: none;
+    cursor: pointer; /* Muda o cursor ao passar sobre o botão */
+}
+
+@media screen and (max-width: 767px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    header .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .sobre {
+        margin: 0;
+    }
+
+    .fotos {
+        grid-template-columns: 1fr;
+    }
+
+    #sobre-a-loja {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #sobre-a-loja img {
+        margin-bottom: 20px;
+    }
+
+    .sobre {
+        text-align: center;
+    }
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    header {
+        padding: 20px 0;
+    }
+
+    nav ul li {
+        margin-right: 10px;
+    }
+
+    #sobre-a-loja h2,
+    #produtos h2 {
+        margin-bottom: 40px;
+        padding-top: 12px;
+    }
+
+    .fotos {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    header {
+        padding: 15px 0;
+    }
+
+    nav ul {
+        justify-content: flex-end;
+    }
+
+    #sobre-a-loja h2,
+    #produtos h2 {
+        margin-bottom: 56px;
+        padding-top: 16px;
+    }
+
+    .fotos {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+
